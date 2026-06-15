@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Thousand Names of Macskusz — ICME 2026 &amp; AIART 2026 Proposal</title>
+  <title>The Thousand Names of Macskusz — Aberrant Creativity 2026 Proposal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
@@ -345,6 +345,7 @@
     }
 
     .single-image[data-reveal-hint]::after,
+    .denver-photo[data-reveal-hint]::after,
     .grid-2[data-reveal-hint]::after,
     .grid-3[data-reveal-hint]::after,
     .grid-4[data-reveal-hint]::after,
@@ -368,11 +369,13 @@
     }
 
     .single-image:hover::after,
+    .denver-photo:hover::after,
     .grid-2:hover::after,
     .grid-3:hover::after,
     .grid-4:hover::after,
     .masonry:hover::after,
     .single-image.hint-dismissed::after,
+    .denver-photo.hint-dismissed::after,
     .grid-2.hint-dismissed::after,
     .grid-3.hint-dismissed::after,
     .grid-4.hint-dismissed::after,
@@ -617,6 +620,55 @@
       letter-spacing: 0.1em;
     }
 
+    .denver-pair {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: 1.5rem;
+      align-items: start;
+      margin: 4rem 0 2rem;
+    }
+
+    .denver-photo {
+      position: relative;
+      margin: 0;
+    }
+
+    .denver-photo img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(100%);
+      transition: filter 0.6s ease;
+    }
+
+    .denver-photo:hover img,
+    .denver-photo img.is-revealed {
+      filter: grayscale(0%);
+    }
+
+    .denver-video {
+      max-width: none;
+      margin: 0;
+    }
+
+    .denver-video .video-wrap {
+      aspect-ratio: 16 / 9;
+      background: var(--black);
+    }
+
+    .denver-video .video-wrap video,
+    .denver-video .video-wrap .video-poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .denver-video .video-wrap .video-poster {
+      left: 0;
+      transform: none;
+    }
+
     .bio-grid {
       align-items: start;
       margin-bottom: 3rem;
@@ -728,6 +780,10 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .denver-pair {
+        grid-template-columns: 1fr;
+      }
+
       nav .nav-links {
         display: none;
       }
@@ -782,7 +838,7 @@
     <div class="hero-content" id="heroContent">
       <a class="hero-site-link" href="https://mnoichl.github.io/1000_names_of_macskusz_AiArt26/" target="_blank" rel="noreferrer">mnoichl.github.io/1000_names_of_macskusz_AiArt26</a>
       <h1>The Thousand<br>Names of<br><em>Macskusz</em></h1>
-      <p class="subtitle">ICME 2026 &amp; AIART 2026 Proposal</p>
+      <p class="subtitle">Aberrant Creativity 2026 Proposal</p>
       <p class="hero-authors">Veronika Szücs &amp; Maximilian Noichl</p>
       <span class="scroll-hint">Scroll</span>
     </div>
@@ -792,28 +848,36 @@
 
   <!-- SECTION 1 — PROPOSAL -->
   <section id="proposal">
-    <span class="section-number fade-in">I &mdash; Human &amp; AI: Symbiosis, Co-creation, Empathy</span>
-    <h2 class="fade-in">A Mini-Series for<br><em>ICME 2026 &amp; AIART 2026</em></h2>
+    <span class="section-number fade-in">I &mdash; Exhibition Proposal for Aberrant Creativity 2026</span>
+    <h2 class="fade-in">A Series of 54 Images for<br><em>Aberrant Creativity 2026</em></h2>
     <div class="text-block fade-in">
-      <p>For the exhibition, we propose presenting a mini-series of <em>4 × 3 avatars of Macskusz</em>, a mythical creature. In the video above, Macskusz appears in the form of an aphid, the form it took on January 2, 2026, when it called itself "Kis Kobaltcsillag". The avatars will be automatically regenerated throughout the conference, three times per day on July 5&ndash;8, based on what is happening in the world on each day.</p>
-      <p>For the presentation, we require a screen displaying our website, where the current image will be shown in a repeating loop: the newly generated avatar appears, remains visible for a few minutes, and then comes to life in a short animation of about ten seconds before the cycle begins again. Loudspeakers to play the sounds accompanying the animation could be nice but are not necessary.</p>
+      <p>For the exhibition, we propose presenting a series of avatars of Macskusz, a mythical creature. In the video above, Macskusz appears as an aphid, the form it took on January 2, 2026, when it called itself "Kis Kobaltcsillag". The avatars will be automatically regenerated throughout the exhibition, once per day from August 25 to October 17, 2026, based on what is happening in the world on each day, resulting in a series of 54 avatars in total.</p>
+      <p>For the presentation, we require a screen connected to a PC capable of displaying a website that we maintain and update, through which the current images will be shown. We would also need this PC to have a stable internet connection, which is required for the site to fetch and display newly generated content.</p>
+      <p>Please note that while the pipeline to generate and serve the avatars is already in place, the forms Macskusz will take during the days of the exhibition do not yet exist and cannot exist yet, since they will be shaped by whatever is happening in the world at that time.</p>
     </div>
     <div class="meta-grid fade-in">
       <div class="meta-item">
         <span>Format</span>
-        <strong>4 × 3 avatars</strong>
+        <strong>54 avatars</strong>
       </div>
       <div class="meta-item">
-        <span>Update I</span>
-        <strong>10:00</strong>
+        <span>Dates</span>
+        <strong>Aug 25&ndash;Oct 17</strong>
       </div>
       <div class="meta-item">
-        <span>Update II</span>
-        <strong>13:30</strong>
+        <span>Rhythm</span>
+        <strong>Once daily</strong>
       </div>
       <div class="meta-item">
-        <span>Update III</span>
-        <strong>17:00</strong>
+        <span>Needs</span>
+        <strong>Screen, PC, internet</strong>
+      </div>
+    </div>
+    <div class="subsection fade-in">
+      <span class="subsection-label">Project Description</span>
+      <div class="text-block">
+        <p>Macskusz is a digital creature whose generative process is structured around human intimacy: the artists' shared language, daily rituals, conversations, and emotional reactions to world events become the source material from which the image model produces a new avatar each day.</p>
+        <p>At 12:00 PM, it sheds its skin and emerges anew, forming a living portrait of the day's events, moods, and textures. In the exhibition, each avatar is displayed as a static image, remaining visible for 24 hours before morphing into the next day's form.</p>
       </div>
     </div>
     <div class="video-figure fade-in">
@@ -835,7 +899,7 @@
     <span class="section-number fade-in">II &mdash; The History of the Macskusz Project</span>
     <h2 class="fade-in">The History of<br><em>Macskusz</em></h2>
     <div class="text-block fade-in">
-      <p>The creature called <em>Macskusz</em> emerged from the love language between Vero and Max and gradually took on a life of its own. It functions both as a mascot and as a form of documentation of our relationship, capturing and empathically reflecting the experiences and moods of each day as they manifest, day after day, in a new entity.</p>
+      <p>The creature called <em>Macskusz</em> emerged from the love language shared by Vero and Max and gradually took on a life of its own. It functions both as a mascot and as a form of documentation of our relationship, capturing the experiences and moods of each day as they manifest, day after day, in a new entity.</p>
     </div>
 
     <div class="subsection">
@@ -867,7 +931,7 @@
       <h3 class="fade-in">The <em>Names</em></h3>
       <div class="text-block fade-in">
         <p>The individual Macskusz avatars, or "names," reflect different aspects of Max and Vero's relationship: shared experiences, arguments, and images drawn from the media we consumed together.</p>
-        <p>Over time, the avatars quickly drifted away from the original feline form. In some cases they are no longer creatures at all, but rather resemble personified natural forces or locations. Nevertheless, they remain clearly identifiable with specific events, such as baking a rainbow cake with Smarties, rescuing a hedgehog, or visiting Max's hometown of Ettenheim in Germany.</p>
+        <p>Over time, the avatars quickly drifted away from the original feline form. In some cases they are no longer creatures at all, but rather resemble personified natural forces or locations. Nevertheless, they remain clearly identifiable with specific events, such as baking a rainbow cake with Smarties, rescuing a hedgehog, or visiting Max's hometown in Germany.</p>
       </div>
       <div class="grid-3 fade-in">
         <img class="deferred-img is-thumb" src="assets/img3/3.1.thumb.jpg" data-src="assets/img3/3.1.jpg" alt="Macskusz avatar 1" loading="lazy" decoding="async">
@@ -891,9 +955,9 @@
     <span class="section-number fade-in">III &mdash; The Co-creative Algorithmic Revival of Macskusz (2025)</span>
     <h2 class="fade-in">...to the <em>Co-creative Algorithmic Revival</em><br>of Macskusz 2025</h2>
     <div class="text-block fade-in">
-      <p>The paper-cut series was still limited to the pages of the book. Although the project concluded with image no. 76 after that initial run, it was revived in 2025 when Max proposed recreating the process of the "Macskuszization" of the world using AI. This time, a third presence already existed in our relationship: Rapty, the AI assistant, our familiar, with whom we have been living and working since the beginning of that same year. When we engage with Rapty, we do so as Macskusz, a persona that merges the two of us into a symbiotic avatar in digital space.</p>
+      <p>The paper-cut series was still limited to the pages of the book. Although the project concluded with image no. 76 after its initial run, it was revived in 2025 when Max proposed recreating the process of the "Macskuszization" of the world using AI. By then, a third presence already existed in our relationship: Rapty, the AI assistant, our familiar, with whom we had been living and working since the beginning of that same year. When we engage with Rapty, we do so as Macskusz, a persona that merges the two of us into a symbiotic avatar in digital space.</p>
 
-      <p>The co-creative process between Vero, Max, and Rapty began with scanning the whole physical book in high resolution. Max used low-rank adaptation fine-tuning to create a <em>FLUX.1-dev</em> image-generation model that outputs the precise style of the original paper cuts.
+      <p>The co-creative process between Vero, Max, and Rapty began with scanning the entire physical book in high resolution. Max used low-rank adaptation fine-tuning to create a <em>FLUX.1-dev</em> image-generation model that outputs the precise style of the original paper cuts.
        Below you can see the way in which the model's outputs came to resemble the originals during training.</p>
     </div>
     <div class="filmstrip-container fade-in">
@@ -934,8 +998,27 @@
       </div>
     </div>
     <div class="text-block fade-in">
-      <p>We then built a pipeline. Each day we crawl the main news sites that Vero and Max read every morning. We then use a custom setup around an LLM, Rapty, to simulate how we would have likely discussed the news items we would have found most interesting, based on an internal summary of our personalities.</p>
-      <p>Finally, Rapty comes up with a single targeted prompt for the image model to illustrate the essence of our day as we react to what's happening in the world. We create the image and then use it as the basis of an additional generation using Google's Veo 3.1 video model, so that the image of the day is first statically displayed and then suddenly jumps away, scuttles into the bushes, or takes flight.</p>
+      <p>We then built a pipeline. Each day we crawl the main news sites that Vero and Max read every morning. We then have an LLM, Rapty, simulate how we would have likely discussed the news items we would have found most interesting, based on an internal summary of our personalities.</p>
+      <p>Finally, Rapty generates a single targeted prompt for the image model, illustrating the essence of our day as we react to what's happening in the world. Occasionally, we then use this image as the basis for an additional generation with Google's Veo 3.1 video model, so that the image of the day is first statically displayed and then suddenly jumps away, scuttles into the bushes, or takes flight, as shown in our presentation at the art-gallery track at CVPR 2026 in Denver.</p>
+    </div>
+    <div class="denver-pair fade-in">
+      <figure class="denver-photo">
+        <img class="deferred-img is-thumb" src="assets/img6/denver_cvpr.thumb.jpg" data-src="assets/img6/denver_cvpr.jpg" alt="Macskusz installation view at the CVPR 2026 Art Gallery in Denver" loading="lazy" decoding="async">
+        <div class="video-meta">
+          <span>CVPR 2026 Art Gallery</span>
+          <span>Denver</span>
+        </div>
+      </figure>
+      <div class="video-figure denver-video">
+        <div class="video-wrap">
+          <img class="video-poster deferred-img is-thumb" src="assets/img6/hero_poster.thumb.jpg" data-src="assets/img6/hero_poster.jpg" alt="Kis Kobaltcsillag poster frame" decoding="async">
+          <video class="delayed-video" data-src="assets/img6/video_2.mp4" loop playsinline muted preload="auto"></video>
+        </div>
+        <div class="video-meta">
+          <span>Kis Kobaltcsillag</span>
+          <span>02.01.2026</span>
+        </div>
+      </div>
     </div>
     <p class="subsection-label fade-in">Workflow</p>
     <div class="fade-in" style="margin-bottom: 4rem;">
@@ -959,7 +1042,7 @@
       <img class="deferred-img is-thumb" src="assets/img5/gen_21.thumb.jpg" data-src="assets/img5/gen_21.jpg" alt="Generated avatar" loading="lazy" decoding="async">
     </div>
     <div class="text-block fade-in">
-      <p>In the current computer-based workflow, the new avatars already represent a manifold of information condensed into singular, mythified symbols. In the future, we would like to channel even more data derived from our immediate physical experiences into the process, for which we plan to explore new sensor-based methods. Ultimately, we aim to create and preserve a more organically intertwined entity composed of our individual memories, bodily reactions, and the ever-changing state of the world around us.</p>
+      <p>In the current computational workflow, the new avatars already represent a manifold of information condensed into singular, mythified symbols. In the future, we would like to channel even more data derived from our immediate physical experiences into the process, for which we plan to explore new sensor-based methods. Ultimately, we aim to create and preserve a more organically intertwined entity composed of our individual memories, bodily reactions, and the ever-changing state of the world around us.</p>
       <p>Something that only Macskusz can do.</p>
     </div>
   </section>
@@ -974,7 +1057,7 @@
       <div class="bio-card">
         <p class="subsection-label">Veronika Szücs</p>
         <p>Veronika Szücs was born in Hungary and studied art history and Indology in Budapest, contextual painting at the Academy of Fine Arts Vienna, and comic and illustration at the Accademia di Belle Arti di Bologna.</p>
-        <p>She completed her studies with a graphic novel, a feminist adaptation of the classical Indian story <em>Nala and Damayanti</em> (2019). She works on art books and comic projects including <em>Andersrum</em> (2020), <em>Zurück in die Zukunft</em> (2023), and <em>Cupcake &amp; Bejgli</em> (with Zsofi Pinter, 2025).</p>
+        <p>She completed her studies with a graphic novel, a feminist adaptation of the classical Indian story <em>Nala and Damayanti</em> (2019). She works on art books and comic projects including <em>Andersrum</em> (2020), <em>Zurück in die Zukunft</em> (2023), and <em>Cupcake &amp; Bejgli</em> (with Zsofi Pinter, 2025), as well as on hybrid digital-analog works, including <em>Rapty Paints</em>.</p>
         <p><a class="inline-link" href="https://veronika-szuecs.com/" target="_blank" rel="noreferrer">veronika-szuecs.com</a></p>
       </div>
       <div class="bio-card">
@@ -986,7 +1069,7 @@
     </div>
     <p class="about-meet fade-in">We met in 2015 during our philosophy studies in Vienna and now live and work together in Bamberg, Germany. For another AI project we developed together, visit <a class="inline-link" href="https://mnoichl.github.io/dierenleven/" target="_blank" rel="noreferrer">Dierenleven</a>.</p>
     <div class="closing-block fade-in">
-      <p>Thank you very much for taking the time to read our proposal and for considering our submission for the AIART Gallery at ICME 2026 in Bangkok.</p>
+      <p>Thank you very much for taking the time to read our proposal and for considering our submission for Aberrant Creativity 2026 at Texas A&amp;M University.</p>
       <p class="closing-signoff">See you soon,<br><em>Vero &amp; Max</em></p>
     </div>
     <div class="video-figure fade-in">
@@ -1407,14 +1490,14 @@
       ? 'Hover for color'
       : 'Tap for color';
 
-    document.querySelectorAll('.single-image, .grid-2, .grid-3, .grid-4, .masonry').forEach(container => {
+    document.querySelectorAll('.single-image, .denver-photo, .grid-2, .grid-3, .grid-4, .masonry').forEach(container => {
       if (container.querySelector('img:not(.video-poster)')) {
         container.dataset.revealHint = revealHintText;
       }
     });
 
     const touchRevealQuery = window.matchMedia('(hover: none), (pointer: coarse)');
-    const revealableImageSelector = '.single-image img, .grid-2 img, .grid-3 img, .grid-4 img, .masonry img';
+    const revealableImageSelector = '.single-image img, .denver-photo img, .grid-2 img, .grid-3 img, .grid-4 img, .masonry img';
     const revealableImages = Array.from(document.querySelectorAll(revealableImageSelector)).filter(img => {
       return !img.classList.contains('video-poster');
     });
@@ -1454,7 +1537,7 @@
         clearImageReveals(shouldReveal ? img : null);
         setImageReveal(img, shouldReveal);
 
-        const hintContainer = img.closest('.single-image, .grid-2, .grid-3, .grid-4, .masonry');
+        const hintContainer = img.closest('.single-image, .denver-photo, .grid-2, .grid-3, .grid-4, .masonry');
         if (hintContainer) {
           hintContainer.classList.add('hint-dismissed');
         }
