@@ -621,6 +621,7 @@
     }
 
     .denver-pair {
+      --denver-media-height: clamp(240px, 28vw, 440px);
       display: grid;
       grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
       gap: 1.5rem;
@@ -635,11 +636,15 @@
 
     .denver-photo img {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: var(--denver-media-height);
       object-fit: cover;
       display: block;
       filter: grayscale(100%);
       transition: filter 0.6s ease;
+    }
+
+    .denver-photo img.deferred-img.is-thumb {
+      transform: none;
     }
 
     .denver-photo:hover img,
@@ -653,7 +658,7 @@
     }
 
     .denver-video .video-wrap {
-      aspect-ratio: 16 / 9;
+      height: var(--denver-media-height);
       background: var(--black);
     }
 
@@ -781,6 +786,7 @@
       }
 
       .denver-pair {
+        --denver-media-height: clamp(190px, 56vw, 360px);
         grid-template-columns: 1fr;
       }
 
@@ -871,13 +877,6 @@
       <div class="meta-item">
         <span>Needs</span>
         <strong>Screen, PC, internet</strong>
-      </div>
-    </div>
-    <div class="subsection fade-in">
-      <span class="subsection-label">Project Description</span>
-      <div class="text-block">
-        <p>Macskusz is a digital creature whose generative process is structured around human intimacy: the artists' shared language, daily rituals, conversations, and emotional reactions to world events become the source material from which the image model produces a new avatar each day.</p>
-        <p>At 12:00 PM, it sheds its skin and emerges anew, forming a living portrait of the day's events, moods, and textures. In the exhibition, each avatar is displayed as a static image, remaining visible for 24 hours before morphing into the next day's form.</p>
       </div>
     </div>
     <div class="video-figure fade-in">
@@ -1011,12 +1010,12 @@
       </figure>
       <div class="video-figure denver-video">
         <div class="video-wrap">
-          <img class="video-poster deferred-img is-thumb" src="assets/img6/hero_poster.thumb.jpg" data-src="assets/img6/hero_poster.jpg" alt="Kis Kobaltcsillag poster frame" decoding="async">
-          <video class="delayed-video" data-src="assets/img6/video_2.mp4" loop playsinline muted preload="auto"></video>
+          <img class="video-poster deferred-img is-thumb" src="assets/img6/sonar_geist_poster.thumb.jpg" data-src="assets/img6/sonar_geist_poster.jpg" alt="Sónar Geist poster frame" decoding="async">
+          <video class="delayed-video" data-src="assets/img6/sonar_geist_video.mp4" loop playsinline muted preload="auto"></video>
         </div>
         <div class="video-meta">
-          <span>Kis Kobaltcsillag</span>
-          <span>02.01.2026</span>
+          <span>Sónar Geist</span>
+          <span>05.06.2026</span>
         </div>
       </div>
     </div>
