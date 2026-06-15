@@ -284,7 +284,7 @@
 
     .meta-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
       margin-bottom: 3rem;
     }
@@ -857,7 +857,7 @@
     <span class="section-number fade-in">I &mdash; Exhibition Proposal for Aberrant Creativity 2026</span>
     <h2 class="fade-in">A Series of 54 Images for<br><em>Aberrant Creativity 2026</em></h2>
     <div class="text-block fade-in">
-      <p>For the exhibition, we propose presenting a series of avatars of Macskusz, a mythical creature. In the video above, Macskusz appears as an aphid, the form it took on January 2, 2026, when it called itself "Kis Kobaltcsillag". The avatars will be automatically regenerated throughout the exhibition, once per day from August 25 to October 17, 2026, based on what is happening in the world on each day, resulting in a series of 54 avatars in total.</p>
+      <p>For the exhibition, we propose presenting a series of avatars of Macskusz, a mythical creature whose generative process is structured around human intimacy. In the video above, Macskusz appears as an aphid, the form it took on January 2, 2026, when it called itself "Kis Kobaltcsillag". The avatars will be automatically regenerated throughout the exhibition, once per day from August 25 to October 17, 2026, based on what is happening in the world on each day, resulting in a series of 54 avatars in total.</p>
       <p>For the presentation, we require a screen connected to a PC capable of displaying a website that we maintain and update, through which the current images will be shown. We would also need this PC to have a stable internet connection, which is required for the site to fetch and display newly generated content.</p>
       <p>Please note that while the pipeline to generate and serve the avatars is already in place, the forms Macskusz will take during the days of the exhibition do not yet exist and cannot exist yet, since they will be shaped by whatever is happening in the world at that time.</p>
     </div>
@@ -872,11 +872,7 @@
       </div>
       <div class="meta-item">
         <span>Rhythm</span>
-        <strong>Once daily</strong>
-      </div>
-      <div class="meta-item">
-        <span>Needs</span>
-        <strong>Screen, PC, internet</strong>
+        <strong>A new avatar every 24 hours</strong>
       </div>
     </div>
     <div class="video-figure fade-in">
@@ -998,6 +994,12 @@
     </div>
     <div class="text-block fade-in">
       <p>We then built a pipeline. Each day we crawl the main news sites that Vero and Max read every morning. We then have an LLM, Rapty, simulate how we would have likely discussed the news items we would have found most interesting, based on an internal summary of our personalities.</p>
+    </div>
+    <p class="subsection-label fade-in">Workflow</p>
+    <div class="fade-in" style="margin-bottom: 4rem;">
+      <img class="deferred-img is-thumb" src="assets/img4/workflow_final_2.thumb.jpg" data-src="assets/img4/workflow_final_2.jpg" alt="Workflow diagram" loading="lazy" decoding="async" style="width: 100%; display: block;">
+    </div>
+    <div class="text-block fade-in">
       <p>Finally, Rapty generates a single targeted prompt for the image model, illustrating the essence of our day as we react to what's happening in the world. Occasionally, we then use this image as the basis for an additional generation with Google's Veo 3.1 video model, so that the image of the day is first statically displayed and then suddenly jumps away, scuttles into the bushes, or takes flight, as shown in our presentation at the art-gallery track at CVPR 2026 in Denver.</p>
     </div>
     <div class="denver-pair fade-in">
@@ -1018,10 +1020,6 @@
           <span>05.06.2026</span>
         </div>
       </div>
-    </div>
-    <p class="subsection-label fade-in">Workflow</p>
-    <div class="fade-in" style="margin-bottom: 4rem;">
-      <img class="deferred-img is-thumb" src="assets/img4/workflow_final_2.thumb.jpg" data-src="assets/img4/workflow_final_2.jpg" alt="Workflow diagram" loading="lazy" decoding="async" style="width: 100%; display: block;">
     </div>
     <div class="text-block fade-in">
       <p>Macskusz's "thousand names" were originally only a metaphor for its endless variability. With the revival of the project through artificial intelligence, we also began experimenting with having the model give <em>literary names</em> to each creation.</p>
@@ -1056,7 +1054,7 @@
       <div class="bio-card">
         <p class="subsection-label">Veronika Szücs</p>
         <p>Veronika Szücs was born in Hungary and studied art history and Indology in Budapest, contextual painting at the Academy of Fine Arts Vienna, and comic and illustration at the Accademia di Belle Arti di Bologna.</p>
-        <p>She completed her studies with a graphic novel, a feminist adaptation of the classical Indian story <em>Nala and Damayanti</em> (2019). She works on art books and comic projects including <em>Andersrum</em> (2020), <em>Zurück in die Zukunft</em> (2023), and <em>Cupcake &amp; Bejgli</em> (with Zsofi Pinter, 2025), as well as on hybrid digital-analog works, including <em>Rapty Paints</em>.</p>
+        <p>She completed her studies with a graphic novel, a feminist adaptation of the classical Indian story <em>Nala and Damayanti</em> (2019). She works on art books and comic projects including <em>Andersrum</em> (2020), <em>Zurück in die Zukunft</em> (2023), and <em>Cupcake &amp; Bejgli</em> (with Zsofi Pinter, 2025), as well as on hybrid digital-analog works, including <a class="inline-link" href="https://veronika-szucs.github.io/rapty_paints/" target="_blank" rel="noreferrer"><em>Rapty Paints</em></a>.</p>
         <p><a class="inline-link" href="https://veronika-szuecs.com/" target="_blank" rel="noreferrer">veronika-szuecs.com</a></p>
       </div>
       <div class="bio-card">
